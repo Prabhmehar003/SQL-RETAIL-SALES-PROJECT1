@@ -114,21 +114,21 @@ AND quantity >= 4
 AND sale_date BETWEEN '2022-11-01' AND '2022-11-30';
 ```
 
-3. **Write a SQL query to calculate the total sales (total_sale) for each category.**:
+3. **Write a SQL query to calculate the total sales (total_sale) for each category**:
 ```sql
 SELECT category,SUM(total_sale) as total_sales
 FROM retail_sales
 GROUP BY category;
 ```
 
-4. **Write a SQL query to find the average age of customers who purchased items from the "Beauty' category.**:
+4. **Write a SQL query to find the average age of customers who purchased items from the "Beauty' category**:
 ```sql
 SELECT ROUND(AVG(age),2) as AVG_age
 FROM retail_sales
 WHERE category ILIKE 'Beauty';
 ```
 
-5. **Write a SQL query to find all transactions where the total sale is greater than 1000.**:
+5. **Write a SQL query to find all transactions where the total sale is greater than 1000**:
 ```sql
 SELECT * FROM retail_sales
 WHERE total_sale >1000;
@@ -149,7 +149,7 @@ GROUP BY month,year
 ORDER BY year,average_sale DESC;
 ```
 
-8. **Write a SQL query to find the top 5 customers based on the highest total sales **:
+8. **Write a SQL query to find the top 5 customers based on the highest total sales**:
 ```sql
 SELECT 
 customer_id,SUM(total_sale) as total_sales
@@ -159,7 +159,7 @@ ORDER BY total_sales DESC
 LIMIT 5;
 ```
 
-9. **Write a SQL query to find the number of unique customers who purchased items from each category.**:
+9. **Write a SQL query to find the number of unique customers who purchased items from each category**:
 ```sql
 SELECT COUNT(Distinct customer_id) as unique_customers, category
 FROM retail_sales
